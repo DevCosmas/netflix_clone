@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+
+  // @include queries(big--desktop) {
+  //   font-size: 50%;
+  // }
+  // @include queries(tab--land) {
+  //   font-size: 37.5%;
+  // }
+  // @include queries(tab--port) {
+  //   font-size: 25%;
+  // }
+  // @include queries(phone) {
+  //   font-size: 12.5%;
+  // }
+}
+body {
+  background-color: rgba(5, 1, 18, 0.8);
+}

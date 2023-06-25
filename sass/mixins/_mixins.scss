@@ -1,0 +1,73 @@
+@mixin label {
+  display: block;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1.5rem;
+}
+@mixin redirect {
+  text-decoration: none;
+  color: $Pri--clr;
+}
+
+@mixin input {
+  height: 5rem;
+  width: 40rem;
+  background-color: black;
+  text-transform: capitalize;
+  padding-left: 2rem;
+  color: $Pri--clr;
+  box-sizing: border-box;
+  border: 0.01rem solid gray;
+  border-radius: 0.2rem;
+}
+
+@mixin email {
+  height: 5rem;
+  background-color: $btn--bkg-clr;
+  color: $Pri--clr;
+  border: none;
+  outline: none;
+  width: 15rem;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  margin-left: 0.8rem;
+}
+
+// MEDIA QUERIES
+@mixin queries($breakpoints) {
+  @if $breakpoints == small--phone {
+    @media (max-width: 27.9em) {
+      @content;
+    }
+  }
+  @if $breakpoints == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoints == tab--port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoints == tab--land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoints == big--desktop {
+    @media (max-width: 112.5em) {
+      @content;
+    }
+    @if $breakpoints == defualt {
+      @media (min-width: 112.5em) {
+        @content;
+      }
+    }
+  }
+}
